@@ -15,7 +15,17 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.NombreChef = Receta.NombreChef;
+        ViewBag.FechaN = Receta.FechaN;
+        View.TipoC = Receta.Receta;
+        ViewBag.Presupuesto = Receta.Presupuesto;
+        ViewBag,Comensales = Receta.Comensales;
         return View();
+    }
+    
+    public IActionResult Index()
+    {
+
     }
 
     public IActionResult Privacy()

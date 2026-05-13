@@ -99,13 +99,17 @@ public string DeterminarDificultad()
     {
         dif = "Principiante"; 
     }
-    else if (Comensales >= 4 && Comensales <= 7)
+    if (Comensales >= 4 && Comensales <= 7 && Presupuesto <= 3000)
     {
-        dif = "";
+        dif = "Intermedio";
     }
-    else if (Comensales >= 8)
+    else if (Comensales >= 1 && Comensales = <= 7 && Presupuesto > 3000)
     {
-        dif = "";
+        dif = "Intermedio";
+    }
+    else if (Comensales >= 8 &&)
+    {
+        dif = "Avanzado";
     }
 }
 
