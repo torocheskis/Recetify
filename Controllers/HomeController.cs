@@ -13,19 +13,20 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult GenerarReceta(Receta receta)
     {
         ViewBag.NombreChef = Receta.NombreChef;
-        ViewBag.FechaN = Receta.FechaN;
-        View.TipoC = Receta.Receta;
-        ViewBag.Presupuesto = Receta.Presupuesto;
+        ViewBag.Edad = Receta.CalcEdad();
+        View.Plato = Receta.DeterminarComida();
+        ViewBag.Tiempo = CalcTimepo();
+        ViewBag.Dificultad = Receta.DeterminarDificultad();
         ViewBag,Comensales = Receta.Comensales;
-        return View();
+        return View("Resultado");
     }
     
     public IActionResult Index()
     {
-
+        return View();
     }
 
     public IActionResult Privacy()

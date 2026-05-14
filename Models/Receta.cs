@@ -1,7 +1,7 @@
 Public class Receta()
 {
-    public string NombreChef{get; set;}
-    public DateTime FechaN{get; set;}
+    public string Nombre{get; set;}
+    public DateTime FechaNacimiento{get; set;}
     public string TipoC{get; set;}
     public double Presupuesto{get; set;}
     public int Comensales{get; set;}
@@ -9,8 +9,8 @@ Public class Receta()
 
 public int CalcEdad()
 {
-    int edad = DateTime.today.year - FechaN.year;
-    if(DateTime.today.month > FechaN.month && DateTime.today.day > FechaN.day)
+    int edad = DateTime.today.year - FechaNacimiento.year;
+    if(DateTime.today.month > FechaNacimiento.month && DateTime.today.day > FechaNacimiento.day)
     {
         edad += 1;
     }
