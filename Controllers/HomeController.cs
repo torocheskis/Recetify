@@ -15,12 +15,12 @@ public class HomeController : Controller
 
     public IActionResult GenerarReceta(Receta receta)
     {
-        ViewBag.NombreChef = Receta.NombreChef;
-        ViewBag.Edad = Receta.CalcEdad();
-        View.Plato = Receta.DeterminarComida();
-        ViewBag.Tiempo = CalcTimepo();
-        ViewBag.Dificultad = Receta.DeterminarDificultad();
-        ViewBag,Comensales = Receta.Comensales;
+        ViewBag.Nombre = receta.Nombre;
+        ViewBag.Edad = receta.CalcEdad();
+        ViewBag.Plato = receta.DeterminarComida();
+        ViewBag.Tiempo = receta.CalcTiempo();
+        ViewBag.Dificultad = receta.DeterminarDificultad();
+        ViewBag.Comensales = receta.Comensales;
         return View("Resultado");
     }
     

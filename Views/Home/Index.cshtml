@@ -1,32 +1,38 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class = "Form">
+﻿<div class="form">
 
 <h1>Recetify</h1>
 
-<Form action = '@Url.Action("GenerarReceta", "home")' method = "Post">
+<form action='@Url.Action("GenerarReceta","Home")' method="post">
 
-Nombre<br>
-<input type = "text" name = "Nombre"><br>
+    Nombre <br>
+    <input type="text" name="Nombre">
 
-Fecha de nacimiento<br>
-<input type = "date" name = "FechaNacimiento"><br>
+    <br><br>
 
-Tipo de comida<br>
-<input type = "radio" name = "Caliente"> Caliente
-<input type = "radio" name = "Fria"> Fria
+    Fecha de nacimiento <br>
+    <input type="date" name="FechaNacimiento">
 
-<br><br>
+    <br><br>
 
-Presupuesto<br>
-<input type = "number" name = "Presupuesto"><br>
+    Tipo de comida <br>
 
-Cantidad de personas<br>
-<input type = "numbre" name = "Comensales" min = "1" max = "20"><br>
+    <input type="radio" name="TipoC" value="Caliente"> Caliente
 
-<input type = "submit" name = "Generar receta">
+    <input type="radio" name="TipoC" value="Fria"> Fria
+
+    <br><br>
+
+    Presupuesto <br>
+    <input type="number" name="Presupuesto">
+
+    <br><br>
+
+    Cantidad de personas <br>
+    <input type="number" name="Comensales">
+
+    <br><br>
+
+    <input type="submit" value="Generar receta">
 
 </form>
 
