@@ -5,7 +5,7 @@
 <form action='@Url.Action("GenerarReceta","Home")' method="post">
 
     Nombre <br>
-    <input type="text" name="Nombre">
+    <input type="text" name="Nombre" required>
 
     <br><br>
 
@@ -16,23 +16,23 @@
 
     Tipo de comida <br>
 
-    <input type="radio" name="TipoC" value="Caliente"> Caliente
+    <input type="radio" name="TipoC" value="Caliente" required> Caliente
 
-    <input type="radio" name="TipoC" value="Fria"> Fria
+    <input type="radio" name="TipoC" value="Fria" required> Fria
 
     <br><br>
 
     Presupuesto <br>
-    <input type="number" name="Presupuesto">
+    <input type="number" name="Presupuesto" required>
 
     <br><br>
 
     Cantidad de personas <br>
-    <input type="number" name="Comensales">
+    <input type="number" name="Comensales" required>
 
     <br><br>
 
-    <input type="submit" value="Generar receta">
+    <input type="submit" value="Generar receta" required>
 
 </form>
 
